@@ -11,7 +11,7 @@ class EggDropperControllerTest extends WebTestCase
      */
     public function testHome()
     {
-        $content = '{"title":"Egg Dropper","values":{"basic":100,"intermediate":14,"hard":4}}';
+        $content = '{"title":"Egg Dropper","values":{"basic":100,"intermediate":14,"hard":0}}';
         $client = static::createClient();
         $client->request('GET', '/');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
@@ -36,7 +36,7 @@ class EggDropperControllerTest extends WebTestCase
      * obtenemos un código 200 y el contenido esperado
      */
     public function testHomeWithOnlyEggsParam() {
-        $content = '{"title":"Egg Dropper","values":{"basic":100,"intermediate":14,"hard":10}}';
+        $content = '{"title":"Egg Dropper","values":{"basic":100,"intermediate":14,"hard":0}}';
         $client = static::createClient();
         $client->request('GET', '/1');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());

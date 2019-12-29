@@ -17,11 +17,7 @@ final class EggDropperController
     }
 
     /**
-     * @Route(
-     * "/{eggs}/{floors}", 
-     * name="home", 
-     * defaults={"eggs": 2, "floors": 10}
-     * )
+     * @Route("/{eggs}/{floors}", name="home", defaults={"eggs": 0, "floors": 0})
      */
     public function eggDropper(int $eggs, int $floors)
     {
